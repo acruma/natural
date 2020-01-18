@@ -1,0 +1,25 @@
+@import
+ 'utils/variables',
+ 'utils/functions',
+ 'utils/mixins';
+
+@import
+ 'base/reset',
+ 'base/typography';
+
+@import
+ 'layout/base', 
+ 'layout/header',
+ 'layout/footer';
+ 
+@import
+ 'components/archivoUno',
+ 'components/archivoDos';
+
+@import
+ 'pages/archivoUno',
+ 'pages/archivoDos';
+
+@import
+'themes/archivoUno',
+'themes/archivoDos';

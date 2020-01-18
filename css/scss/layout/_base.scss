@@ -1,0 +1,193 @@
+html,
+body {
+  color: #333;
+  position: relative;
+  @include tipografia($SourceSans, 2, regular);
+}
+
+h1 {
+  @include tipografia($TheSans, 1, bold);
+  font-size: 32px;
+  color: $h1Color;
+}
+
+h2 {
+  @include tipografia($TheSans, 1, bold);
+  font-size: 24px;
+  color: $h2Color;
+}
+
+h3 {
+  @include tipografia($TheSans, 1, semi-bold);
+  font-size: 18px;
+  color: $h3Color;
+}
+
+h4 {
+  @include tipografia($SourceSans, 2, semi-bold);
+  font-size: 16px;
+  color: $h4Color;
+}
+
+.ps_pp {
+  @include tipografia($SourceSans, 2, regular);
+  font-size: 22px;
+  color: $ppColor;
+}
+
+p {
+  @include tipografia($SourceSans, 2, light);
+  font-size: 17px;
+  color: $pColor;
+}
+
+ul {
+  list-style-type: none;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ps_pagination {
+  margin: 1em 0 3em 0;
+  li {
+    border: 0;
+  }
+  li.page-item .page-link {
+    /*background-color: #97c9ed;*/
+    border: 0;
+    border-radius: 0;
+    color: #444;
+    /*padding: 18px;*/
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+  }
+
+  li.page-item.active .page-link {
+    background-color: #97c9ed;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+    /*padding: 18px;*/
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+  }
+
+  li.itemNext .page-link {
+    border: 1px solid #97c9ed;
+    padding: 1px;
+    svg path {
+      fill: #97c9ed;
+    }
+  }
+}
+
+.ps_centerLayer {
+  margin: 0 auto;
+}
+
+.ps_marginBottomLayer {
+  margin-bottom: 1em;
+}
+
+.cutLine {
+  border: 2px solid #0065a9;
+  max-width: 50px;
+}
+
+.cutFullLineContainer {
+  margin-bottom: 1em;
+  .cutLine {
+    border: 2px solid #206db5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 38px;
+  }
+  .cutFullLine {
+    border: 1px solid #eee;
+    max-width: 100%;
+  }
+}
+
+.ps_more {
+  /*padding: 1em 0 1em 0;*/
+  .itemContainer {
+    max-width: 378px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.ps_noPadding {
+  padding: 0 !important;
+}
+#ps_to_up {
+  z-index: 10;
+}
+
+.ps_fw100 {
+  font-weight: 100 !important;
+}
+
+.ps_fw200 {
+  font-weight: 200 !important;
+}
+
+.ps_fw300 {
+  font-weight: 300 !important;
+}
+
+.ps_fw400 {
+  font-weight: 400 !important;
+}
+.ps_blueLink {
+  color: #0271b8 !important;
+}
+.ps_underline {
+  text-decoration: underline !important;
+}
+
+/* Codigo Mateo para correlacion con el header */
+
+@media screen and (min-width: 992px) {
+  .ps_row_highlighted {
+    margin-top: -94px;
+  }
+}
+
+.ps-content-margins {
+  @media (min-width: 1200px) {
+    max-width: $ps-content-margins;
+    margin: 0 auto;
+  }
+}
+
+.ps_noPadding_LR {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ps_noMargin_LR {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.ps_block_band {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.region-sidebar-first {
+  padding-bottom: 1em;
+}

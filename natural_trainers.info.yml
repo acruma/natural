@@ -1,0 +1,28 @@
+name: Tema Natural Trainers
+type: theme
+description: 'Designed & Developed by <a href=https://github.com/acruma>AcRuMa</a><br/>Contact us for any kind of Drupal services <a href=mailto:acrumateo@gmail.com>acrumateo@gmail.com</a>'
+package: core
+# core: 8.x
+base theme: classy
+
+#Libraries
+libraries:
+  - natural_trainers/bootstrap-cdn
+  - natural_trainers/global-components
+  - natural_trainers/external-libraries
+#Regions
+regions:
+  header: 'Header'
+  highlighted: 'Elementos Destacados'
+  breadcrumb: 'Breadcrumb'
+  contenido_extra: 'Contenido Extra' 
+  content: 'Contenido Principal'
+  sidebar_first: 'Sidebar Izquierdo'
+  footer: 'Footer'
+  auto_hidden_block: 'Auto hidden blocks'
+
+# Information added by Drupal.org packaging script on 2017-11-20
+version: '8.x-1.3'
+core: '8.x'
+project: 'natural_trainers'
+datestamp: 1511196792

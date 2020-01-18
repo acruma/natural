@@ -1,0 +1,68 @@
+<?php
+
+/* Cambiar la cadena de texto natural_trainers por el nombre del TEMA */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\Crypt;
+
+/**
+ * @param $suggestions
+ * @param array $variables
+ * Sugestiones para el TEMA creación de Twigs
+ */
+ 
+function natural_trainers_preprocess_region(&$variables) {  
+  $variables['ps_route_name'] = \Drupal::routeMatch()->getRouteName();
+}
+
+function natural_trainers_theme_suggestions_container_alter(array &$suggestions, array $variables){
+  $element = $variables['element'];
+  
+  if (isset($element['#array_parents'])) {
+    $suggestions[] = 'container__has_parent';
+  }
+  else {
+    $suggestions[] = 'container__no_parent';
+  }
+
+  if (isset($element['#type']) && $element['#type'] != 'container') {
+    $suggestions[] = 'container__' . $element['#type']. '__' . $element['#name'];
+  }
+
+  if (isset($element['#type']) && $element['#type'] == 'container' && isset($element['children']['#type'])) {
+    $suggestions[] = 'container__' . $element['children']['#type']. '__' . $element['#name'];
+  }
+}
+
+function natural_trainers_theme_suggestions_select_alter(array &$suggestions, array $variables, $hook) {
+  $suggestions[] = $variables['element']['#type']. '__' .$variables['element']['#name'];
+}
+
+function natural_trainers_theme_suggestions_input_alter(array &$suggestions, array $variables, $hook) {
+  $suggestions[] = 'input'. '__' .$variables['element']['#type']. '__' . $variables['element']['#name'];
+}
+
+function natural_trainers_theme_suggestions_textarea_alter(&$suggestions, array $variables) {
+  $element = $variables['element'];
+  $suggestions[] = $variables['element']['#type']. '__' . $variables['element']['#name'];
+}
+
+
+/**
+ * Prepares variables for media templates.
+ *
+ * Default template: media.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - media: An individual media for display.
+ */
+function natural_trainers_preprocess_media(&$variables) {
+  $variables['media'] = $variables['elements']['#media'];
+}
+
+
+
+
+
+
