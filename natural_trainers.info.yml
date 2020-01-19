@@ -12,9 +12,7 @@ libraries:
   - natural_trainers/external-libraries
 #Regions
 regions:
-  header: 'Header'
   content: 'Contenido Principal'
-  footer: 'Footer'
   auto_hidden_block: 'Auto hidden blocks'
 
 # Information added by Drupal.org packaging script on 2017-11-20
