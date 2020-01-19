@@ -32,10 +32,6 @@
   ]
 %}
 
-{% set url = url('<current>')|render|render %}
-{% set url = url|split('/') %}
-{% set body_classes = body_classes|merge({ "class" : "ps-path-" ~ url[3] }) %}
-
 <!DOCTYPE html>
 <html{{ html_attributes }}>
   <head>

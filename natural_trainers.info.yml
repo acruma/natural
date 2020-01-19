@@ -13,11 +13,7 @@ libraries:
 #Regions
 regions:
   header: 'Header'
-  highlighted: 'Elementos Destacados'
-  breadcrumb: 'Breadcrumb'
-  contenido_extra: 'Contenido Extra' 
   content: 'Contenido Principal'
-  sidebar_first: 'Sidebar Izquierdo'
   footer: 'Footer'
   auto_hidden_block: 'Auto hidden blocks'
 

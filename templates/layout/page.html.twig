@@ -44,208 +44,30 @@
 #}
 
 <div class="container-fluid">
-	<div class="row ps_headerContainer">
+	<div class="row headerContainer">
 		<div class="col-12 ps_headerIcons">
-			<div class="ps_content_margins">
-				{{ page.header_icons }}
-			</div>
-		</div>
-
-		<div class="col-12 ps_header" id="ps_headerMenu">
 			<div class="ps_content_margins">
 				{{ page.header }}
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-12">
-			<div class="ps_buscador-header-ayto-block">
-				<div class="ps_content_margins">
-					{{ page.buscador }}
-				</div>
-			</div>
-		</div>
-	</div>
-
-	{% if page.highlighted %}
-		<div class="row ps_noPadding_LR ps_row_highlighted">
-			<div class="col-12 ps_col_highlighted">
-				{{ page.highlighted }}
-			</div>
-		</div>
-	{% endif %}
-
-	{% if page.breadcrumb %}
-		<div class="row ps_breadcrumbContainer bgColorAreaTematica d-none d-sm-block">
-			<div class="col-12">
-				<div class="ps_content_margins">
-					{{ page.breadcrumb }}
-				</div>
-			</div>
-		</div>
-	{% endif %}
-
-	{% if page.alertas %}
-		<div class="row ps_alertasContainer">
-			<div class="col-12 ps_noPadding_LR">
-				{{ page.alertas }}
-			</div>
-		</div>
-	{% endif %}
 	
-	{% if page.contenido_extra %}
-        <div class="row ps_contenido_extra_row">
-            <div class="col-12 ps_contenido_extra">
-                {{ page.contenido_extra }}
-            </div>
-        </div>
-    {% endif %}
-
-	<div class="row">
-		<div class="col-12 ps_mainContent ps_content_margins">
-			<div class="row">
-				<div class="col-12">
-					<a id="main-content" tabindex="-1"></a>
-					{# link is in html.html.twig #}
-					{% if page.sidebar_first %}
-						<div class="row ps-alcobendas-content-container">
-							<aside class="col-12 col-lg-3 layout-sidebar-first" role="complementary">
-								{{ page.sidebar_first }}
-							</aside>
-							<div class="col-12 col-lg-9 ps-alcobendas-content">
-								{{ page.content }}
-							</div>
-						</div>
-					{% else %}
-						<div class="row ps-alcobendas-content-container">
-							<div class="col-12 ps-alcobendas-content">
-								{{ page.content }}
-							</div>
-						</div>
-					{% endif %}
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	{% if page.contenido_generico %}
-		<div class="row ps_ContentGenerico">
-			<div class="col-12">
-				<div class="row justify-content-md-center">
-					<div class="col-12">
-						{{ page.contenido_generico }}
-					</div>
-				</div>
-			</div>
-		</div>
-	{% endif %}
-
-	{% if page.feedback %}
-		<div class="row ps_feedback_content">
-			<div class="col-12">
-				<div class="ps_content_margins">
-					<div class="row justify-content-md-center">
-						<div class="col-12">
-							<div class="ps_content_margins">
-								{{ page.feedback }}
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	{% endif %}
-
-	{# <footer> #}
-
-	<div class="row ps_footerUpSection d-none d-sm-block">
-		<div class="col-12">
+	<div class="row contentContainer">
+		<div class="col-12 ps_headerIcons">
 			<div class="ps_content_margins">
-				<div class="row justify-content-md-center">
-					<div class="col-12">
-						<div class="ps_content_margins">
-							{{ page.footer_accesos_directos }}
-						</div>
-					</div>
-				</div>
+				{{ page.content }}
 			</div>
 		</div>
 	</div>
 	
-	<div class="row ps_footerlogoSection">
-		<div class="col-12">
-			<div class="ps_logo">
-				{{ page.footer_logo }}
+	<div class="row footerContainer">
+		<div class="col-12 ps_headerIcons">
+			<div class="ps_content_margins">
+				{{ page.footer }}
 			</div>
 		</div>
 	</div>
 	
-	<div class="row ps_footerMainMenuSection">
-		<div class="col-12">
-			<div class="ps_content_margins">
-				<div class="row">
-					<div class="col-12 col-md">
-						{{ page.footer_first }}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- <colectivos> -->
-	<div class="row ps_footerColectivosSection">
-		<div class="col-12">
-			<div class="ps_content_margins">
-				<div class="row justify-content-md-center">
-					<div class="col-12">
-						{{ page.footer_second }}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- </colectivos> -->
-
-	<div class="row ps_footerContactSection">
-		<div class="col-12">
-			<div class="ps_content_margins">
-				<div class="row">
-					<div class="col-xs-12 col-md">
-						<div class="ps_footerListContainer ps_infoContact">
-							{{ page.footer_third }}
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-md-6">
-						<div class="ps_footerListContainer">
-							<div class="row">
-								<div class="col-12">
-									{{ page.footer_fourth }}
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-md">
-						<div class="ps_footerListContainer ps_externalLogos">
-							{{ page.footer_fifth }}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	{# </footer> #}
-</div>
-
-<div class="ps_menuMobileSection">
-	<!-- absoluto -->
-	<div class="ps_menuMobileContainer">{# <?php $pulsiaCore->shared('menuMobile/menuAccordion'); ?> #}
-	
-	</div>
 </div>
 
 {# <?php $pulsiaCore->component('toUp', 'toUp'); ?> #}
