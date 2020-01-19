@@ -34,13 +34,11 @@ Source Sans Pro
 En el portal alcobendas.org y sus sitios web relacionados se utiliza como
 texto de párrafo por defecto
 */
-/*
-Sass Variables
-*/
-/*
-$ps-content-margins:1366px;
-$ps-content-margins2:683px; //$ps-content-margins / 2
-*/
+div#block-views-block-banner-home-block-1 img {
+  position: fixed;
+  width: 100vw;
+  height: 100vh; }
+
 /*
 Sass Variables
 */
